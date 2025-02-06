@@ -1,0 +1,14 @@
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.col-2 {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+app-header {
+    padding-left: 0;
+    padding-right: 0;
+}

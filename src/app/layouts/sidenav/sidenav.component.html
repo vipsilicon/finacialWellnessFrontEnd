@@ -1,0 +1,11 @@
+<div class="side-nav-container">
+    <mat-list role="list">
+        <mat-list-item *ngFor="let sideNav of sideNavList;" [routerLink]="sideNav.route">
+            <mat-icon>{{ sideNav.icon }}</mat-icon>
+            <span>{{ sideNav.label }}</span>
+        </mat-list-item>
+    </mat-list>
+    <div>
+        <img src="../../../assets/Logo/fox.png" alt="">
+    </div>
+</div>

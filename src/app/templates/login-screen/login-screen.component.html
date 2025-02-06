@@ -1,0 +1,30 @@
+<div class="container">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Welcome To Login Page </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div>
+                <ng-container *ngIf="login$ | async"></ng-container>
+                <form [formGroup]="loginForm" (submit)="onSubmit()">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput type="email" placeholder="abc@xyz.com" formControlName="email" />
+                        <mat-icon matSuffix color="warn">email</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput [type]="passwordHide ? 'password' : 'text'" placeholder="password"
+                            formControlName="password" required />
+                        <button mat-icon-button matSuffix (click)="passwordHide = !passwordHide">
+                            <mat-icon color="warn">{{
+                                passwordHide ? "visibility_off" : "visibility"
+                                }}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                    <button mat-raised-button color="primary" type="submit">Login</button>
+                </form>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
